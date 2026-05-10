@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
+@theme {
+  --color-ink: #0b1733;
+  --color-ink-soft: #25324d;
+  --color-paper: #fbfbf7;
+  --color-cream: #f3f7e5;
+  --color-cream-deep: #e6efc9;
+  --color-mentor-blue: #17428b;
+  --color-mentor-blue-deep: #0e2a5c;
+  --color-mentor-blue-soft: #cadeff;
+  --color-mentor-green: #95c11f;
+  --color-mentor-green-soft: #d2e58a;
+  --color-mentor-plum: #772583;
+  --color-line: #e7e3d6;
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-bricolage), var(--font-inter), system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 1px 2px rgba(11,23,51,.04), 0 8px 30px -12px rgba(11,23,51,.10);
+  --shadow-lift: 0 1px 3px rgba(11,23,51,.06), 0 18px 50px -20px rgba(11,23,51,.18);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+* { -webkit-font-smoothing: antialiased; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
 }
+
+::selection { background: var(--color-mentor-green); color: var(--color-mentor-blue-deep); }
+
+.font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+.text-balance { text-wrap: balance; }
+.text-pretty { text-wrap: pretty; }
+
+.grain::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(11,23,51,.05) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  mask-image: linear-gradient(to bottom, black, transparent 70%);
+}
+
+.claim-gradient {
+  background: linear-gradient(90deg, #17428b 0%, #1f5fbf 35%, #95c11f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .3s ease;
+}
+.link-underline:hover { background-size: 100% 1px; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 40s linear infinite; }
+
+.card-lift { transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s; }
+.card-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+
+.nudge-x { transition: transform .25s ease; }
+.group:hover .nudge-x { transform: translateX(4px); }
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up { animation: fade-in-up .8s cubic-bezier(.2,.8,.2,1) both; }
