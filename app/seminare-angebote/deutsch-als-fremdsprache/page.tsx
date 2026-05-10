@@ -66,6 +66,8 @@ export default function DeutschPage() {
         eyebrow="Sprache"
         title="Deutsch als Fremdsprache."
         lead="Mentor bietet eine Vielzahl an Sprachkursen, Prüfungs­vorbereitungs­kursen, Grammatik­kursen, Konversations­kursen, Berufskursen und firmen­spezifischen Kursen — alle aus einer Hand."
+        image="/images/slider/slide2.jpg"
+        imageAlt="Deutschkurs bei MENTOR"
       />
 
       <Section variant="paper">

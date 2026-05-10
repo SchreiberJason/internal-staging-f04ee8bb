@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Briefcase,
@@ -12,9 +13,15 @@ import {
   Phone,
   Scale,
   Spark,
-  Star,
 } from "./components/icons";
 import { SectionHeading } from "./components/ui";
+import {
+  EfqmSeal,
+  HeroPhoto,
+  OecertSeal,
+  PartnerLogo,
+  asset,
+} from "./components/brand";
 
 export default function Home() {
   return (
@@ -96,9 +103,20 @@ function Hero() {
 
         <div className="relative lg:col-span-5">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
-            <div className="absolute inset-0 rounded-[2rem] bg-mentor-blue-deep p-7 text-paper shadow-lift">
-              <div className="grain absolute inset-0 rounded-[2rem]" />
-              <div className="relative flex h-full flex-col">
+            <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-mentor-blue-deep shadow-lift">
+              <Image
+                src={asset("/images/slider/slide1.jpg")}
+                alt="Lehrlinge in Schulungs­raum"
+                width={900}
+                height={1100}
+                priority
+                unoptimized
+                className="absolute inset-0 h-full w-full object-cover opacity-35"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-mentor-blue-deep via-mentor-blue-deep/80 to-mentor-blue-deep/30" />
+              <div className="grain absolute inset-0" />
+
+              <div className="relative flex h-full flex-col p-7 text-paper">
                 <div className="flex items-center justify-between text-xs uppercase tracking-[0.18em] text-mentor-blue-soft/80">
                   <span>Mentoring-Programm</span>
                   <span>2026 →</span>
@@ -117,7 +135,7 @@ function Hero() {
                     {["AQUA", "Coaching", "Deutsch", "ÖIF", "AMS"].map((t) => (
                       <span
                         key={t}
-                        className="rounded-pill border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-paper"
+                        className="rounded-pill border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-paper backdrop-blur-sm"
                       >
                         {t}
                       </span>
@@ -127,24 +145,27 @@ function Hero() {
               </div>
             </div>
 
-            <div className="absolute -right-4 -top-6 hidden rotate-3 rounded-2xl bg-mentor-green px-4 py-3 text-mentor-blue-deep shadow-lift sm:block">
-              <div className="font-display text-2xl font-semibold leading-none">
-                ÖCERT
+            <div className="absolute -right-5 -top-6 hidden flex-col gap-2 sm:flex">
+              <div className="flex items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-lift">
+                <OecertSeal size={28} />
+                <div className="text-[10px] font-semibold uppercase leading-tight tracking-[0.16em] text-mentor-blue-deep">
+                  Zertifiziert<br />ÖCERT
+                </div>
               </div>
-              <div className="text-[10px] font-medium uppercase tracking-[0.18em]">
-                + EFQM zertifiziert
+              <div className="ml-6 flex items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-lift">
+                <EfqmSeal size={32} />
+                <div className="text-[10px] font-semibold uppercase leading-tight tracking-[0.16em] text-mentor-blue-deep">
+                  Qualified<br />by EFQM
+                </div>
               </div>
             </div>
 
-            <div className="absolute -left-6 bottom-10 hidden -rotate-6 rounded-2xl bg-paper px-4 py-3 shadow-lift sm:block">
-              <div className="flex items-center gap-2 text-mentor-blue-deep">
-                <Star className="h-4 w-4 fill-mentor-green stroke-mentor-green" />
-                <span className="font-display text-lg font-semibold">
-                  Handschlag­qualität
-                </span>
+            <div className="absolute -left-6 bottom-10 hidden -rotate-3 rounded-2xl bg-mentor-green px-4 py-3 text-mentor-blue-deep shadow-lift sm:block">
+              <div className="font-display text-base font-semibold leading-tight">
+                Handschlag­qualität.
               </div>
-              <div className="text-xs text-ink-soft">
-                Was wir versprechen, halten wir.
+              <div className="text-[10px] font-medium uppercase tracking-[0.18em]">
+                Seit 1993
               </div>
             </div>
           </div>

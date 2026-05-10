@@ -40,6 +40,8 @@ export default function AngeboteOverviewPage() {
         eyebrow="Seminare & Angebote"
         title="Bildung an der Schnitt­stelle zwischen Mensch und Unternehmen."
         lead="MENTOR bietet eine breite Palette an Dienstleistungen, deren gemeinsames Ziel die Entwicklung und Umsetzung von persönlichen, beruflichen und unternehmens­bezogenen Zielen ist."
+        image="/images/slider/slide2.jpg"
+        imageAlt="Kursteilnehmende im Seminar"
       />
 
       <Section variant="paper">

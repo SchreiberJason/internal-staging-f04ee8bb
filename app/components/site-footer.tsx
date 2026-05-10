@@ -1,21 +1,40 @@
 import Link from "next/link";
-import { Logo } from "./icons";
+import { EfqmSeal, MentorWordmark, OecertSeal, PartnerLogo } from "./brand";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-ink text-paper">
+      <div className="border-b border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-12 lg:flex-row lg:justify-between">
+          <div>
+            <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-paper/55">
+              Zertifizierungen & Partner
+            </div>
+            <div className="mt-1 font-display text-lg font-semibold text-paper">
+              Was uns abnimmt, was wir geben.
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="grid h-16 w-28 place-items-center rounded-xl bg-white px-3">
+              <OecertSeal size={42} />
+            </div>
+            <div className="grid h-16 w-20 place-items-center rounded-xl bg-white px-2">
+              <EfqmSeal size={48} />
+            </div>
+            <div className="grid h-16 w-px bg-white/10" />
+            <PartnerLogo src="/images/partners/context.jpg" alt="context" />
+            <PartnerLogo src="/images/partners/trendwerk.jpg" alt="Trendwerk" />
+            <PartnerLogo src="/images/partners/derdruck.jpg" alt="Der Druck" />
+            <PartnerLogo src="/images/partners/werkstatt.jpg" alt="Die Werkstatt" />
+            <PartnerLogo src="/images/partners/radstation.jpg" alt="Die Radstation Wien" />
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <div className="flex items-center gap-3">
-            <Logo />
-            <div>
-              <div className="font-display text-xl font-semibold tracking-tight">
-                MENTOR
-              </div>
-              <div className="text-[11px] uppercase tracking-[0.18em] text-paper/55">
-                Bildung · Beratung · Österreich
-              </div>
-            </div>
+          <div className="inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-3">
+            <MentorWordmark height={32} />
           </div>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-paper/70">
             Wir aktivieren Potenziale — bei Lehrlingen und Unternehmen. Seit

@@ -17,6 +17,8 @@ export default function KontaktPage() {
         eyebrow="Kontakt"
         title="Sag Hallo."
         lead="Persönlich, telefonisch oder per E-Mail. Wir freuen uns über deine Nachricht — und antworten innerhalb eines Werktags."
+        image="/images/slider/slide3.jpg"
+        imageAlt="Erstgespräch bei MENTOR"
       />
 
       <Section variant="paper">

@@ -18,6 +18,8 @@ export default function UeberUnsPage() {
         title="Wir aktivieren"
         highlight="Potenziale."
         lead="Seit 1993 entwickeln und realisieren wir Bildungs- und Beratungs­programme für öffentliche Auftraggeber, private Einrichtungen, Unternehmen und einzelne Menschen — überall in Österreich."
+        image="/images/slider/slide3.jpg"
+        imageAlt="Beratungs­gespräch bei MENTOR"
       />
 
       <Section variant="paper">

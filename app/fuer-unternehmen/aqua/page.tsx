@@ -28,6 +28,8 @@ export default function AquaPage() {
         title="Arbeitsplatznahe Qualifizierung."
         lead="Unternehmen haben Schwierigkeiten, ihren Personalbedarf zu decken — Arbeit­suchende wollen sich für neue Berufsfelder qualifizieren. AQUA führt beide zusammen, mit maßgeschneiderter, betriebs­naher Ausbildung."
         variant="dark"
+        image="/images/slider/slide5.jpg"
+        imageAlt="AQUA-Schulung im Betrieb"
       />
 
       <Section variant="paper">

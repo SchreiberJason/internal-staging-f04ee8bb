@@ -28,6 +28,8 @@ export default function SteiermarkPage() {
         title="AQUA Steiermark — Arbeitsplatznahe Qualifizierung."
         lead="Die Suche, Auswahl und Einarbeitung neuer Mitarbeitender kostet Zeit und Geld. AQUA kombiniert diese Prozesse effizient — Unternehmen gewinnen passgenaue Fachkräfte, Arbeitssuchende erhalten praxisnahe Ausbildung mit Perspektive."
         variant="dark"
+        image="/images/slider/slide5.jpg"
+        imageAlt="AQUA-Schulung in der Steiermark"
       />
 
       <Section variant="paper">

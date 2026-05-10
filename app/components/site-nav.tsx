@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Logo } from "./icons";
+import { MentorWordmark } from "./brand";
 
 type SubItem = {
   href: string;
@@ -102,16 +103,15 @@ export function SiteNav() {
       ].join(" ")}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3.5">
-        <Link href="/" className="flex items-center gap-2.5">
-          <Logo />
-          <div className="leading-tight">
-            <div className="font-display text-lg font-semibold tracking-tight text-mentor-blue-deep">
-              MENTOR
-            </div>
-            <div className="text-[10px] font-medium uppercase tracking-[0.18em] text-ink-soft">
-              Bildung · Beratung
-            </div>
-          </div>
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+          aria-label="MENTOR — Startseite"
+        >
+          <MentorWordmark height={40} />
+          <span className="hidden border-l border-line pl-3 text-[10px] font-medium uppercase tracking-[0.18em] text-ink-soft sm:inline">
+            Bildung · Beratung
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">

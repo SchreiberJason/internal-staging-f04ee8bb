@@ -27,6 +27,8 @@ export default function FuerUnternehmenPage() {
         eyebrow="Für Unternehmen"
         title="Lehrlinge finden, fördern, halten."
         lead="Wir vermitteln passgenaue Lehrlinge, übernehmen die fachliche und sprachliche Vorbereitung und entlasten Sie bei Förderungen und AMS-Anträgen — vom Erstgespräch bis zur Einarbeitung."
+        image="/images/slider/slide5.jpg"
+        imageAlt="Trainerin betreut Teilnehmende am Laptop"
       />
 
       <Section variant="paper">

@@ -82,6 +82,8 @@ export default function TeamPage() {
         eyebrow="Team"
         title="Die Menschen hinter MENTOR."
         lead="Geschäftsleitung und Ansprech­personen in den Regionen Mitte/West und Ost/Süd. Schreib oder ruf direkt an — wir freuen uns."
+        image="/images/slider/slide2.jpg"
+        imageAlt="Trainerin mit Kursteilnehmenden"
       />
 
       <Section variant="paper">

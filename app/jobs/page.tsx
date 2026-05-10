@@ -68,6 +68,8 @@ export default function JobsPage() {
         eyebrow="Jobs bei MENTOR"
         title="Bildung, die Menschen weiterbringt — auch dich."
         lead={`„Kompetente, engagierte und kreative Mitarbeitende bilden das Herzstück jedes Unternehmens.“ Als eines der größten privaten Bildungs- und Beratungs­unternehmen Österreichs bieten wir ein professionelles Arbeits­klima und echte Entwicklungs­perspektiven.`}
+        image="/images/slider/slide4.jpg"
+        imageAlt="Mitarbeiterin im Beratungs­alltag"
       />
 
       <Section variant="paper">

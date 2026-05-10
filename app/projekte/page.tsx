@@ -56,6 +56,8 @@ export default function ProjekteOverviewPage() {
         eyebrow="Projekte"
         title="Aktiv in fünf Bundesländern."
         lead="Unsere Projekte sind unsere DNA. Hier ein Überblick darüber, was MENTOR aktuell in den einzelnen Regionen umsetzt — viele dieser Programme sind sowohl für Lehrlinge als auch für Unternehmen relevant."
+        image="/images/slider/slide1.jpg"
+        imageAlt="Projektarbeit im Klassenraum"
       />
 
       <Section variant="paper">

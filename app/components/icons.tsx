@@ -143,18 +143,22 @@ export function Logo(p: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...p}
-      width={36}
-      height={36}
-      viewBox="0 0 36 36"
+      width={40}
+      height={40}
+      viewBox="0 0 40 40"
       fill="none"
       aria-hidden
     >
-      <rect width="36" height="36" rx="10" fill="#17428b" />
-      <path
-        d="M9 24V12h2.4l3.4 7 3.4-7H20.6V24h-2.2v-7.6L15.6 22h-1.6l-2.8-5.6V24H9Z"
-        fill="#fff"
-      />
-      <circle cx="27" cy="24" r="3" fill="#95c11f" />
+      <rect width="40" height="40" rx="10" fill="#17428b" />
+      {/* Stylized "M" + building bars matching the real Mentor wordmark */}
+      <g>
+        <rect x="10" y="11" width="2.6" height="18" rx="0.6" fill="#fff" />
+        <rect x="14" y="11" width="2.6" height="18" rx="0.6" fill="#fff" />
+        <rect x="18" y="11" width="2.6" height="18" rx="0.6" fill="#fff" />
+        <rect x="22" y="11" width="2.6" height="18" rx="0.6" fill="#fff" />
+        <rect x="9.5" y="10" width="15.5" height="2.2" rx="0.6" fill="#fff" />
+      </g>
+      <rect x="28" y="10" width="3.5" height="3.5" rx="0.4" fill="#95c11f" />
     </svg>
   );
 }
